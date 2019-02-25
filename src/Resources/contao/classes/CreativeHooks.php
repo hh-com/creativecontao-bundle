@@ -25,7 +25,8 @@ class CreativeHooks
             /* Use the default theme */
             if (\Config::get('useDefaultTheme'))
 			{
-				$GLOBALS['TL_CSS'][] = "/bundles/creativecontao/creative.css|static";
+				$GLOBALS['TL_CSS'][] = "/bundles/creativecontao/css/creative.css|static";
+				GLOBALS['TL_JAVASCRIPT'][] = "/bundles/creativecontao/js/creative.js";
             }
             
 			if (\Config::get('pathToCssFramework'))

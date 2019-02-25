@@ -1,8 +1,8 @@
 {
     "name": "hh-com/creativecontao-bundle",
     "type": "contao-bundle",
-    "description": "Themes for Contao 4",
-	"keywords": ["two-factor", "two-step", "authentication", "security", "symfony"],
+    "description": "Bootstrap for Contao 4",
+	"keywords": ["bootstrap", "contao4"],
     "homepage": "https://github.com/hh-com/creativecontao-bundle",
     "license": "MIT",
     "authors": [
