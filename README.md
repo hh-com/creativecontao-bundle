@@ -1,6 +1,6 @@
-# Contao 4 skeleton bundle
+#CreativeContao Bundle
 
-Add Bootstrap classes and Grid Layout with this module.
+Add Bootstrap classes and Grid Layout to page, article and content templates.
 
 
 ## Install
