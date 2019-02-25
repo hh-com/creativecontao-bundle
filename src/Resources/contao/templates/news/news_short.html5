@@ -1,0 +1,20 @@
+
+<div class="layout_short row arc_<?= $this->archive->id ?> block<?= $this->class ?>" itemscope itemtype="http://schema.org/Article">
+
+  <?php if ($this->hasMetaFields): ?>
+    <p class="info col-sm-12"><time datetime="<?= $this->datetime ?>" itemprop="datePublished"><?= $this->date ?></time> <?= $this->author ?> <?= $this->commentCount ?></p>
+  <?php endif; ?>
+
+  <div class="col-sm-12">
+    <h2 itemprop="name"><?= $this->linkHeadline ?></h2>
+
+    <div class="ce_text block" itemprop="description">
+      <?= $this->teaser ?>
+    </div>
+
+    <?php if ($this->hasText || $this->hasTeaser): ?>
+      <p class="more"><?= $this->more ?></p>
+    <?php endif; ?>
+    
+  </div>
+</div>

@@ -1,0 +1,25 @@
+.table th, .table td {
+    padding: .1rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    width: 14.2857%;
+}
+.table thead th {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 12px 0;
+    text-align: center;
+}
+.table .days .body {
+    min-height: 80px;
+}
+.table .event:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.table .eventlink span {
+    white-space: pre-line;
+    margin: 2px 0px;
+    line-height: 0.9rem;
+    font-size: 80%;
+    display: inline-block;
+    padding: 2px;
+    background-color: #eeee;
+}

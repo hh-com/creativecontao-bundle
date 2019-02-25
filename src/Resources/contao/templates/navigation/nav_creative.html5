@@ -1,0 +1,82 @@
+<?php
+#$bootstrapLvL = CreativeHooks::getBootstrapClassForNavLevel($this->level, $this);
+?>
+<?php if ( false ): ?>
+
+<ul class="navbar-nav mr-auto
+<?php echo $this->level ?>
+<?php echo $bootstrapLvL['containerClass']; ?>
+<?php if($this->level == "level_1") echo "navbar-left"; ?> ">
+
+    <?php foreach ($this->items as $item): ?>
+
+        <?php if ($item['isActive']): ?>
+            <li class="nav-item active <?php echo $item['class'] ?>" >
+                <a id="navid-<?php echo $item['alias']; ?>" class="nav-link <?php echo $item['class'] ?>"
+
+                    <?php echo $item['link'] ?>
+
+                </a>
+                <?php echo $item['subitems'] ?>
+            </li>
+        <?php else: ?>
+            <li class="nav-item <?php if ($item['class']) echo $item['class'] ; ?>" >
+                <a id="navid-<?php echo $item['alias']; ?>" href="<?php echo $item['href'] ?: './' ?>" title="<?php echo $item['pageTitle'] ?: $item['title'] ?>"
+                   class="nav-link <?php if ($item['class']) echo $item['class']; ?> <?php if (strpos($item['class'], 'submenu') !== false) echo 'dropdown-toggle'; ?>"
+                    <?php if ($item['accesskey']) echo ' accesskey="' . $item['accesskey'] . '"'; ?>
+                    <?php if ($item['tabindex']) echo ' tabindex="' . $item['tabindex'] . '"'; ?>
+                    <?php if ($item['nofollow']) echo ' rel="nofollow"'; ?><?php echo $item['target'] ?>
+                    <?php if (strpos($item['class'], 'submenu') !== false) echo 'data-toggle="dropdown"';?> ><?php echo $item['link'] ?>
+                    <?php if (strpos($item['class'], 'submenu') !== false AND $this->level == "level_1") echo '<b class="caret"></b>';?>
+                </a>
+
+                <?php echo $item['subitems'] ?>
+
+            </li>
+        <?php endif; ?>
+    <?php endforeach; ?>
+</ul>
+
+<?php endif; ?>
+
+<?php
+
+
+if($this->level == "level_1")
+{
+    $navItem = "nav-item";
+    $navLink = "nav-link";
+    $ulClass = "navbar-nav mr-auto";
+}
+else{
+    $navItem = "dropdown-item";
+    $navLink = "";
+    $ulClass = "dropdown-menu";
+}
+?>
+
+
+<ul class="<?php echo $this->level ?> <?php echo $ulClass ?> <?php if (strpos($item['class'], 'submenu') !== false) echo 'dropdown-menu';?>">
+    <?php foreach ($this->items as $item): ?>
+        <?php if ($item['isActive']): ?>
+            <li class="<?php echo $item['class'] ?> <?php echo $navItem ?>  active
+            <?php if (!empty($item['subitems']) ) if($this->level == "level_1") echo 'dropdown'; else echo 'dropdown-submenu'; ?>
+            ">
+                <a class="<?php echo $item['class'] ?> <?php echo $navLink ?> <?php if (!empty($item['subitems'])) echo 'dropdown-toggle'; ?>"<?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> <?php if (!empty($item['subitems'])) echo 'data-toggle="dropdown"'; ?> itemprop="name"><?php echo $item['link'] ?></a>
+                <?php echo $item['subitems'] ?>
+            </li>
+        <?php else: ?>
+            <li class="<?php if ($item['class']) echo $item['class']; ?> <?php echo $navItem ?> <?php if (!empty($item['subitems'])) if($this->level == "level_1") echo 'dropdown'; else echo 'dropdown-submenu'; ?>">
+                <a href="<?php echo $item['href'] ?: './' ?>" title="<?php echo $item['pageTitle'] ?: $item['title'] ?>"
+                    class="<?php echo $navLink ?> <?php if ($item['class']) $item['class']; ?> <?php if (!empty($item['subitems'])) echo 'dropdown-toggle'; ?>
+                    "
+                    <?php if ($item['accesskey'] !== '') echo ' accesskey="' . $item['accesskey'] . '"'; ?>
+                    <?php if ($item['tabindex']) echo ' tabindex="' . $item['tabindex'] . '"'; ?><?php echo $item['target'] ?>
+                    <?php echo $item['rel'] ?><?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> <?php if (!empty($item['subitems'])) echo 'data-toggle="dropdown"'; ?> itemprop="url">
+
+                    <span itemprop="name"><?= $item['link'] ?></span>
+                </a>
+                <?php echo $item['subitems'] ?></li>
+        <?php endif; ?>
+    <?php endforeach; ?>
+</ul>

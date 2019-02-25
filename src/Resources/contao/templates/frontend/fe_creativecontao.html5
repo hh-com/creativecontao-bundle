@@ -1,0 +1,59 @@
+<?php $this->extend('fe_page'); ?>
+<?php $this->block('container'); ?>
+
+<?php
+    #var_dump(class_exists('Hhcom\CreativeContaoBundle\CreativePage'));
+
+    global $objPage;
+    $layout = LayoutModel::findById($objPage->layout);
+    $container = "container";
+    $row = "row";
+
+    if ($layout->cols == '3cl') {
+        $main = \Config::get('col3MainColWidth');
+        $left = \Config::get('col3LeColWidth');
+        $right = \Config::get('col3RiColWidth');
+    } elseif ($layout->cols == '2cll') {
+        $main = \Config::get('col2MainColWidth');
+        $left = \Config::get('col2LeRiColWidth');
+    } else if ($layout->cols == '2clr') {
+        $main = \Config::get('col2MainColWidth');
+        $right = \Config::get('col2LeRiColWidth');
+    } else {
+        #$main = \Config::get('col1MainColWidth');
+        $main = "";
+        $container = "outer-countainer";
+        $row = "outer-countainer";
+    }
+?>
+
+<div id="container" class="<?php echo $container. " lay-".$layout->cols; ?>">
+    <div class="<?php echo $row; ?>">
+        <main id="main" class="<?php echo $main; ?>">
+            <div class="inside">
+                <?= $this->main ?>
+            </div>
+            <?php $this->sections('main'); ?>
+        </main>
+
+        <?php if ($this->left): ?>
+        <aside id="left" class="<?php echo $left; ?>">
+            <div class="inside">
+                <?= $this->left ?>
+            </div>
+        </aside>
+        <?php endif; ?>
+
+        <?php if ($this->right): ?>
+
+        <aside id="right" class="<?php echo $right; ?>">
+            <div class="inside">
+                <?= $this->right ?>
+            </div>
+        </aside>
+
+        <?php endif; ?>
+
+    </div>
+</div>
+<?php $this->endblock(); ?>

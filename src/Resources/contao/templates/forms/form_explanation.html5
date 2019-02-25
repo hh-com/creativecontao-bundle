@@ -1,0 +1,4 @@
+
+<div class="<?= $this->prefix ?> row explanation<?php if ($this->class) echo ' ' . $this->class; ?>">
+  <?= $this->generate() ?>
+</div>

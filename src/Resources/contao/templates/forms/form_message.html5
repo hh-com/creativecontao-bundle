@@ -1,0 +1,4 @@
+
+<div class="row <?= $this->class ?>">
+  <?= $this->message ?>
+</div>

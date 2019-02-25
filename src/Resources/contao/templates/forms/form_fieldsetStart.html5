@@ -1,0 +1,9 @@
+
+<fieldset class="form-group <?php if ($this->class): ?> <?= $this->class ?> <?php endif; ?>">
+    <div class="row">
+      <?php if ($this->label): ?>
+        <legend class="col-form-label col-sm-12"><?= $this->label ?></legend>
+      <?php endif; ?>
+
+
+

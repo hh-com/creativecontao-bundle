@@ -1,0 +1,39 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+<div class="row">
+  <div class="col-xs-12">
+    <?php if (!$this->addBefore): ?>
+      <div class="col"> 
+        <?= $this->text ?>
+      </div>
+    <?php endif; ?>
+
+    <?php if ($this->addImage): ?>
+
+    <?php 
+    $foating = "";
+    if ($this->floating == "left") {
+      $foating = "float-left pr-3 pl-3 col-lg-auto col";
+    } elseif ($this->floating == "right") {
+      $foating = "float-right pl-3 pr-3 col-lg-auto col";
+    } else {
+      $foating = "pl-3 pr-3";
+    }
+    ?>
+
+    <div class="image-wrapper <?php echo $foating; ?>">
+    <?php $this->insert('image', $this->arrData); ?>
+    </div>
+      
+    <?php endif; ?>
+
+    <?php if ($this->addBefore): ?>
+      <div class="col">
+        <?= $this->text ?>
+      </div>
+      
+    <?php endif; ?>
+    </div>
+  </div>
+<?php $this->endblock(); ?>

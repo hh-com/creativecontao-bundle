@@ -1,0 +1,86 @@
+#main {
+  order:2;
+}
+#left {
+  order:1;
+}
+#right {
+  order:3;
+
+}
+/* Invisible style from contao layout */
+.invisible {
+  border:0;
+  clip:rect(0 0 0 0);
+  height:1px;
+  margin:-1px;
+  overflow:hidden;
+  padding:0;
+  position:absolute;
+  width:1px;
+}
+
+/**
+FORM
+ */
+/* Error message below forms */
+fieldset > .row
+{
+  margin-right: 0;
+  margin-left: 0;
+}
+.form-text.error
+{
+  color: #d9534f;
+}
+
+/** gallery_default**/
+.ce_gallery ul{
+  padding: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.ce_gallery .imgli {
+  padding: 0;
+}
+.ce_gallery .imgli.col_first {
+
+}
+.ce_gallery .imgli.col_last {
+
+}
+@media (max-width: 575.98px) {
+
+}
+
+@media (min-width: 576px) {
+
+}
+@media (max-width: 767.98px) {
+
+  /* Seitenlayout Anordnung */
+  .lay-2cll #left {
+    order:2;
+  } 
+}
+
+@media (min-width: 768px) {
+  
+}
+
+@media (max-width: 991.98px) {
+  .float-right {
+    float: left !important;
+  }
+}
+
+@media (min-width: 992px) {
+
+}
+@media (max-width: 1199.98px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}

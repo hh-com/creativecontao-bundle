@@ -1,0 +1,43 @@
+<?php
+if ($this->perRow == "1")
+    $cc_col = array("col-lg-12","col-sm-12","col-xs-12");
+elseif ($this->perRow == "2")
+    $cc_col = array("col-lg-6","col-sm-6","col-xs-12");
+elseif ($this->perRow == "3")
+    $cc_col = array("col-lg-4","col-sm-6","col-xs-4");
+elseif ($this->perRow == "4")
+    $cc_col = array("col-lg-3","col-sm-4","col-xs-4");
+elseif ($this->perRow == "5")
+    $cc_col = array("col","col-sm-2","col-xs-2");
+elseif ($this->perRow == "6")
+    $cc_col = array("col-lg-2","col-sm-4","col-xs-4");
+elseif ($this->perRow == "7")
+    $cc_col = array("col","","col-xs-4");
+elseif ($this->perRow == "12")
+    $cc_col = array("col-lg-1","col-sm-3","col-xs-3");
+else
+    $cc_col = array("col-lg-1","col-sm-1","col-xs-1");
+?>
+
+<div class="col-md-12 cols_<?= $this->perRow ?>" itemscope itemtype="http://schema.org/ImageGallery">
+  <?php foreach ($this->body as $class=>$row): ?>
+  <ul class="row">
+    <?php foreach ($row as $col): ?>
+      <?php if ($col->addImage): ?>
+        <li class="imgli <?php echo $cc_col[0]; ?> <?php echo $cc_col[1]; ?> <?php echo $cc_col[2]; ?> <?= $class ?> <?= $col->class ?>">
+          <figure class="image_container"<?php if ($col->margin): ?> style="<?= $col->margin ?>"<?php endif; ?>>
+            <?php if ($col->href): ?>
+              <a href="<?= $col->href ?>"<?= $col->attributes ?><?php if ($col->linkTitle) echo ' title="' . $col->linkTitle . '"'; ?>><?php $this->insert('picture_default', $col->picture); ?></a>
+            <?php else: ?>
+              <?php $this->insert('picture_default', $col->picture); ?>
+            <?php endif; ?>
+            <?php if ($col->caption): ?>
+              <figcaption class="caption"><?= $col->caption ?></figcaption>
+            <?php endif; ?>
+          </figure>
+        </li>
+      <?php endif; ?>
+    <?php endforeach; ?>
+  </ul>
+  <?php endforeach; ?>
+</div>
