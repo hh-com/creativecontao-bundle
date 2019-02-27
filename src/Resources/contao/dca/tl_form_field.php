@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Harald
- * Date: 15.11.2018
- * Time: 20:38
- */
 
 \System::loadLanguageFile('tl_content');
-
 
 foreach ($GLOBALS['TL_DCA']['tl_form_field']['palettes'] as $key=>$value)
 {

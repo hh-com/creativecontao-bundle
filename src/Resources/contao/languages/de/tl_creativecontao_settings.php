@@ -5,6 +5,9 @@ $GLOBALS['TL_LANG']['tl_creativecontao_settings']['creativecontao_defaultTheme_l
 $GLOBALS['TL_LANG']['tl_creativecontao_settings']['creativecontao_customTheme_legend'] = 'Eigenes Theme';
 $GLOBALS['TL_LANG']['tl_creativecontao_settings']['creativecontao_columns_legend'] = 'Default-Spalten im Seitenlayout';
 
+$GLOBALS['TL_LANG']['tl_creativecontao_settings']['gridColumns'][0] = 'Anzahl der gesamt Spalten';
+$GLOBALS['TL_LANG']['tl_creativecontao_settings']['gridColumns'][1] = 'Tragen Sie hier die Anzahl der Spalten ihres CSS Frameworks ein.';
+
 $GLOBALS['TL_LANG']['tl_creativecontao_settings']['useDefaultTheme'][0] = 'Standard Theme aktivieren';
 $GLOBALS['TL_LANG']['tl_creativecontao_settings']['useDefaultTheme'][1] = 'Aktivieren Sie das mitgelieferte Standard-Theme für Bootstrap (Benötigt Bootstrap).';
 

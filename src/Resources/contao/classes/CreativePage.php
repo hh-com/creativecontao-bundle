@@ -12,17 +12,12 @@ class CreativePage extends \Module
     /**
      * @return LayoutModel|null
      */
-    public static function getLayoutInformationxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx()
+    public static function getLayoutInformation()
     {
         global $objPage;
         return LayoutModel::findById($objPage->layout);
     }
-	
-	public static function testxy()
-	{
-		echo "test method ... ";
-	}
-
+    
 }
 
 ?>

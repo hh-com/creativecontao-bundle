@@ -1,7 +1,5 @@
 <?php
-/**
- * System configuration
- */
+
 $GLOBALS['TL_DCA']['tl_creativecontao_settings'] = array
 (
 

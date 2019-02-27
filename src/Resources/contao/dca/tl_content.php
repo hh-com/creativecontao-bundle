@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Harald
- * Date: 27.10.2018
- * Time: 21:45
- */
 
 if (Input::get('do') == 'article')
     foreach ($GLOBALS['TL_DCA']['tl_content']['palettes'] as $key=>$value)
