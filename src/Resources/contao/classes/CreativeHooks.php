@@ -91,7 +91,7 @@ class CreativeHooks
 
     /**
      * Hook parseFrontendTemplate
-     * Add container or container-fluid to every mod_article template when layout is 1cl (one column)
+     * Add container or container-fluid to every mod_article template when layout is 1cl (one column) 
      * 
      * @param $strBuffer
      * @param $strTemplate
