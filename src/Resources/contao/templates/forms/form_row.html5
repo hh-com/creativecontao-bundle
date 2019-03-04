@@ -1,8 +1,13 @@
+<?php if($this->startRow && TL_MODE == 'FE'): ?>
+<div class="row">
+<?php endif; ?>
+	<div class="form-group col-sm-<?php echo($this->selectContentWidth); ?> <?= $this->prefix ?><?php if ($this->class) echo ' ' . $this->class; ?>">
+		  <?php $this->block('label'); ?>
+		  <?php $this->endblock(); ?>
 
-<div class="form-group col-sm-<?php echo($this->selectContentWidth); ?> <?= $this->prefix ?><?php if ($this->class) echo ' ' . $this->class; ?>">
-      <?php $this->block('label'); ?>
-      <?php $this->endblock(); ?>
-
-      <?php $this->block('field'); ?>
-      <?php $this->endblock(); ?>
+		  <?php $this->block('field'); ?>
+		  <?php $this->endblock(); ?>
+	</div>
+<?php if($this->endRow && TL_MODE == 'FE'): ?>
 </div>
+<?php endif; ?>
