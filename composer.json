@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": "^7.0 || ^7.2",
-        "contao/core-bundle": "^4.4",
+        "contao/core-bundle": "^4.7",
         "symfony/framework-bundle": ">3.3"
     },
     "extra": {
