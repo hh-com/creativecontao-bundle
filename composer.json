@@ -12,8 +12,8 @@
         }
     ],
     "require": {
-        "php": "^7.0",
         "hh-com/creativecontao-bundle": "dev-master",
+        "php": "^7.0",
         "contao/core-bundle": "^4.4"
     },
     "extra": {
