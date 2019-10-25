@@ -1,6 +1,8 @@
 # Composer
 /composer.lock
 /vendor/
+/.history/
+
 
 # PhpUnit
 /phpunit.xml
