@@ -8,7 +8,7 @@ if (Input::get('do') == 'article')
         $dontShowAt[] = '__selector__';
         if ( !in_array($key, $dontShowAt) )
         {
-            $GLOBALS['TL_DCA']['tl_content']['palettes'][$key] = str_replace(',type', ',type;{contentWidth_legend},selectContentWidth,customContentWidth,forceNewRow;', $GLOBALS['TL_DCA']['tl_content']['palettes'][$key]);
+            $GLOBALS['TL_DCA']['tl_content']['palettes'][$key] = str_replace(',type', ',type;{contentWidth_legend},selectContentWidth,customContentWidth,fullWidth,forceNewRow;', $GLOBALS['TL_DCA']['tl_content']['palettes'][$key]);
         }
     }
 
