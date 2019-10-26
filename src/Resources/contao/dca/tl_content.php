@@ -41,3 +41,12 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['forceNewRow'] = array
     'eval'                    => array('tl_class'=>'w50 m12'),
     'sql'                     => "char(1) NOT NULL default ''"
 );
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['fullWidth'] = array
+(
+    'label'                   => &$GLOBALS['TL_LANG']['tl_content']['fullWidth'],
+    'exclude'                 => true,
+    'inputType'               => 'checkbox',
+    'eval'                    => array('tl_class'=>'w50 m12'),
+    'sql'                     => "char(1) NOT NULL default ''"
+);

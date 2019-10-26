@@ -190,14 +190,16 @@ class CreativeHooks
                      */
                     if ($objModel->type != 'article') {
                         $buffer = "<div class='creative creative-" . $objModel->id . " " . $contentWidth . "'>";
+                        if ($objModel->fullWidth) $buffer .= "<div class='full-width'>";
                         $buffer .= $strBuffer;
+                        if ($objModel->fullWidth) $buffer .= "</div>";
                         $buffer .= "</div>";
                         $strBuffer = $buffer;
                     }
                 }
             }
-          
-
+            
+            
             if ($objModel->forceNewRow) {
                 $strBuffer = '<div class="w-100"></div>' . $strBuffer;
             }
