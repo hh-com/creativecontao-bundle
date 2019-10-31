@@ -19,10 +19,10 @@ else{
             <li class="<?php echo $item['class'] ?> <?php echo $navItem ?>  active
             <?php if (!empty($item['subitems']) ) if($this->level == "level_1") echo 'dropdown'; else echo 'dropdown-submenu'; ?>
             ">
-            <span>
-                <a class="<?php echo $item['class'] ?> <?php echo $navLink ?> <?php if (!empty($item['subitems'])) echo 'dropdown-toggle'; ?>"<?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> <?php if (!empty($item['subitems'])) echo 'data-toggle="dropdown"'; ?> itemprop="name"><?php echo $item['link'] ?></a>
+            
+                <a class="<?php echo $item['class'] ?> <?php echo $navLink ?> <?php if (!empty($item['subitems'])) echo 'dropdown-toggle'; ?>"<?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> <?php if (!empty($item['subitems'])) echo 'data-toggle="dropdown"'; ?> itemprop="name"><span><?php echo $item['link'] ?></span></a>
                 <?php echo $item['subitems'] ?>
-            </span>
+            
             </li>
         <?php else: ?>
             <li class="<?php if ($item['class']) echo $item['class']; ?> <?php echo $navItem ?> <?php if (!empty($item['subitems'])) if($this->level == "level_1") echo 'dropdown'; else echo 'dropdown-submenu'; ?>">
