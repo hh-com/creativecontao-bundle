@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": "^7.0",
-        "contao/core-bundle": "^4.4"
+        "contao/core-bundle": "^4.4 || <4.8"
     },
     "extra": {
         "contao-manager-plugin": "Hhcom\\CreativeContaoBundle\\ContaoManager\\Plugin" 
