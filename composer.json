@@ -4,6 +4,7 @@
     "description": "Bootstrap for Contao 4",
 	"keywords": ["bootstrap", "contao4"],
     "homepage": "https://github.com/hh-com/creativecontao-bundle",
+    "version": "0.9.6",
     "license": "MIT",
     "authors": [
         {
@@ -13,7 +14,7 @@
     ],
     "require": {
         "php": "^7.0",
-        "contao/core-bundle": "^4.4"
+        "contao/core-bundle": "^4.4.46"
     },
     "extra": {
         "contao-manager-plugin": "Hhcom\\CreativeContaoBundle\\ContaoManager\\Plugin" 

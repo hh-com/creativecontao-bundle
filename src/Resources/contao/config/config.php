@@ -8,6 +8,13 @@ $GLOBALS['BE_MOD']['system']['creativecontao_settings'] = array(
     'icon' => 'system/themes/flexible/images/settings.gif',
 );
 
+// Style sheet
+if (defined('TL_MODE') && TL_MODE == 'BE')
+{
+	$GLOBALS['TL_CSS'][] = 'bundles/creativecontao/css/backend.scss|static';
+	$GLOBALS['TL_JAVASCRIPT'][] = 'bundles/creativecontao/js/backend.js';
+}
+
 /* */
 $GLOBALS['TL_HOOKS']['generatePage'][] = array('Hhcom\CreativeContaoBundle\CreativeHooks', 'setDefaultTheme');
 #$GLOBALS['TL_HOOKS']['initializeSystem'][] = array('Hhcom\CreativeContaoBundle\CreativeHooks', 'setDefaultTheme');

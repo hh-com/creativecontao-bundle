@@ -3,20 +3,15 @@
 $GLOBALS['TL_DCA']['tl_creativecontao_settings'] = array
 (
 
-    // Config
     'config' => array
     (
         'dataContainer'               => 'File',
         'closed'                      => true
     ),
-
-    // Palettes
     'palettes' => array
     (
-       # '__selector__'                => array(''),
-        'default'                     => '{creativecontao_defaultTheme_legend},useDefaultTheme;{creativecontao_customTheme_legend},customThemeInformation,pathToCssFramework,pathToJsFramework;{creativecontao_columns_legend},gridColumns;col1MainColWidth;col2MainColWidth,col2LeRiColWidth;col3MainColWidth,col3LeColWidth,col3RiColWidth;'
+        'default'                     => 'customThemeInformation,{creativecontao_defaultTheme_legend},useDefaultTheme;{creativecontao_columns_legend},gridColumns;col1MainColWidth;col2MainColWidth,col2LeRiColWidth;col3MainColWidth,col3LeColWidth,col3RiColWidth;{creativecontao_background_legend},backgroundColors'
     ),
-    // Fields
     'fields' => array
     (
         'useDefaultTheme' => array
@@ -33,59 +28,53 @@ $GLOBALS['TL_DCA']['tl_creativecontao_settings'] = array
             'eval'                    => array('maxlength'=>255, 'tl_class'=>'long'),
             'input_field_callback'    => array('tl_creativecontao_settings', 'helpMode')
         ),
-        'pathToCssFramework' => array
-        (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_creativecontao_settings']['pathToCssFramework'],
-            'inputType'               => 'text',
-            'eval'                    => array('mandatory'=>false, 'decodeEntities'=>true, 'tl_class'=>'long')
-        ),
-		'pathToJsFramework' => array
-        (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_creativecontao_settings']['pathToJsFramework'],
-            'inputType'               => 'text',
-            'eval'                    => array('mandatory'=>false, 'decodeEntities'=>true, 'tl_class'=>'long')
-        ),
         'gridColumns' => array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tl_creativecontao_settings']['gridColumns'],
             'inputType'               => 'text',
-            'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50', 'rgxp'=>'digit')
+            'eval'                    => array('mandatory'=>true, 'tl_class'=>'w33', 'rgxp'=>'digit')
         ),
         'col1MainColWidth' => array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tl_creativecontao_settings']['col1MainColWidth'],
             'inputType'               => 'text',
-            'eval'                    => array('mandatory'=>false, 'tl_class'=>'w50')
+            'eval'                    => array('mandatory'=>false, 'tl_class'=>'w33')
         ),
         'col2MainColWidth' => array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tl_creativecontao_settings']['col2MainColWidth'],
             'inputType'               => 'text',
-            'eval'                    => array('mandatory'=>false, 'tl_class'=>'w50')
+            'eval'                    => array('mandatory'=>false, 'tl_class'=>'w33')
         ),
         'col2LeRiColWidth' => array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tl_creativecontao_settings']['col2LeRiColWidth'],
             'inputType'               => 'text',
-            'eval'                    => array('mandatory'=>false, 'tl_class'=>'w50')
+            'eval'                    => array('mandatory'=>false, 'tl_class'=>'w33')
         ),
         'col3MainColWidth' => array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tl_creativecontao_settings']['col3MainColWidth'],
             'inputType'               => 'text',
-            'eval'                    => array('mandatory'=>false, 'tl_class'=>'w50')
+            'eval'                    => array('mandatory'=>false, 'tl_class'=>'w33')
         ),
         'col3LeColWidth' => array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tl_creativecontao_settings']['col3LeColWidth'],
             'inputType'               => 'text',
-            'eval'                    => array('mandatory'=>false, 'tl_class'=>'w50')
+            'eval'                    => array('mandatory'=>false, 'tl_class'=>'w33')
         ),
         'col3RiColWidth' => array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tl_creativecontao_settings']['col3RiColWidth'],
             'inputType'               => 'text',
-            'eval'                    => array('mandatory'=>false, 'tl_class'=>'w50')
+            'eval'                    => array('mandatory'=>false, 'tl_class'=>'w33')
+        ),
+        'backgroundColors' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_creativecontao_settings']['backgroundColors'],
+            'inputType'               => 'keyValueWizard',
+            'eval'                    => array('mandatory'=>false, 'tl_class'=>'w33'),
         ),
 
         /*

@@ -2,9 +2,9 @@
 
 <?php $this->block('content'); ?>
 
-  <<?= $this->tag ?>>
+  <<?= $this->tag ?> class="list-group">
     <?php foreach ($this->items as $item): ?>
-      <li<?php if ($item['class']): ?> class="<?= $item['class'] ?>"<?php endif; ?>><?= $item['content'] ?></li>
+      <li class="<?php if ($item['class']) echo $item['class'] ?> list-group-item"><?php echo $item['content'] ?></li>
     <?php endforeach; ?>
   </<?= $this->tag ?>>
 

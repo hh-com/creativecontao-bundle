@@ -25,25 +25,9 @@ class CreativeHooks
             /* Use the default theme */
             if (\Config::get('useDefaultTheme'))
 			{
-				$GLOBALS['TL_CSS'][] = "/bundles/creativecontao/css/creative.css|static";
-				$GLOBALS['TL_JAVASCRIPT'][] = "/bundles/creativecontao/js/creative.js";
+				$GLOBALS['TL_USER_CSS'][] = "/bundles/creativecontao/css/creative.scss|static";
+				$GLOBALS['TL_BODY'][] = "<script src='/bundles/creativecontao/js/creative.js'></script>";
             }
-            
-			if (\Config::get('pathToCssFramework'))
-            $GLOBALS['TL_CSS'][] = \Config::get('pathToCssFramework');
-		
-			if (\Config::get('pathToJsFramework'))
-			$GLOBALS['TL_JAVASCRIPT'][] = \Config::get('pathToJsFramework');
-            
-            /* Add additional HTML Tag from tl_layout before the closing body tag </body>*/
-           
-            $layout = \LayoutModel::findById($objPage->layout);
-            $GLOBALS['TL_BODY'][] = $layout->footeradds;
-        }
-
-        if (TL_MODE == 'BE')
-        {
-            //$GLOBALS['TL_CSS'][] = "/system/modules/creativeContao/assets/themes/$themeName/bootstrap.css|static";
         }
 
     }

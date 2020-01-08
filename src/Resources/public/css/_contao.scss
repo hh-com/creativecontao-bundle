@@ -1,0 +1,49 @@
+/* Invisible style from contao layout */
+.invisible {
+    border:0;
+    clip:rect(0 0 0 0);
+    height:1px;
+    margin:-1px;
+    overflow:hidden;
+    padding:0;
+    position:absolute;
+    width:1px;
+}
+
+nav {
+
+    a {
+        display: block;
+        padding: 10px 20px;
+
+        &.dropdown-toggle {
+            
+        }
+    }
+
+    .dropdown-item {
+       display: block;
+       padding: 0;
+        margin: 0;
+        transition: all 1s ease;
+    }
+
+    .dropdown-menu {
+        transition: all 1s ease;
+        padding: 0;
+        margin: 0;
+    }
+    .nav-link {
+        padding: 0;
+        transition: all 1s ease;
+    }
+    .submenu.dropdown {
+        cursor: pointer;
+    }
+   
+    .level_2,
+    .level_3 {
+        border: 1px solid red;
+    }
+
+}

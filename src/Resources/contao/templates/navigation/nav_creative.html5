@@ -20,7 +20,7 @@ else{
             <?php if (!empty($item['subitems']) ) if($this->level == "level_1") echo 'dropdown'; else echo 'dropdown-submenu'; ?>
             ">
             
-                <a class="<?php echo $item['class'] ?> <?php echo $navLink ?> <?php if (!empty($item['subitems'])) echo 'dropdown-toggle'; ?>"<?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> <?php if (!empty($item['subitems'])) echo 'data-toggle="dropdown"'; ?> itemprop="name"><span><?php echo $item['link'] ?></span></a>
+                <a class="<?php echo $item['class'] ?> <?php echo $navLink ?> <?php if (!empty($item['subitems'])) echo 'dropdown-toggle'; ?>"<?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> <?php if (!empty($item['subitems'])) echo 'data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"'; ?> itemprop="name"><span><?php echo $item['link'] ?></span></a>
                 <?php echo $item['subitems'] ?>
             
             </li>
@@ -33,7 +33,7 @@ else{
                     <?php if ($item['tabindex']) echo ' tabindex="' . $item['tabindex'] . '"'; ?><?php echo $item['target'] ?>
                     <?php echo $item['rel'] ?><?php if (!empty($item['subitems'])) echo ' aria-haspopup="true"'; ?> <?php if (!empty($item['subitems'])) echo 'data-toggle="dropdown"'; ?> itemprop="url">
 
-                    <span itemprop="name"><?= $item['link'] ?></span>
+                    <span itemprop="name"><?php echo $item['link']; ?></span>
                 </a>
                 <?php echo $item['subitems'] ?></li>
         <?php endif; ?>

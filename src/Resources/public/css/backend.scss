@@ -1,0 +1,52 @@
+/* basic design */
+.w25 {
+    width: calc(25% - 30px);
+    float: left;
+    min-height: 80px;
+}
+.w30 {
+    width: calc(30% - 30px);
+    float: left;
+    min-height: 80px;
+}
+.w33 {
+    width: calc(33% - 30px);
+    float: left;
+    min-height: 80px;
+}
+.w70 {
+    width: calc(70% - 30px);
+    float: left;
+    min-height: 80px;
+}
+.alert {
+	position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+.alert-primary {
+	color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+}
+.alert-secondary {
+    color: #383d41;
+    background-color: #e2e3e5;
+    border-color: #d6d8db;
+}
+.alert-danger {
+	color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.alert-success {
+	color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.bright {
+	color: #9fa4a8;
+	font-size: 80%;
+}

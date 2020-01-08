@@ -17,27 +17,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['bs_container_fullwidth'] = array(
     'eval'                    => array('tl_class'=>'w50'),
     'sql'                     => "char(1) NOT NULL default ''"
 );
-$GLOBALS['TL_DCA']['tl_module']['fields']['bs_navbar_inverse'] = array(
-    'label'                   => &$GLOBALS['TL_LANG']['tl_module']['bs_navbar_inverse'],
-    'exclude'                 => true,
-    'inputType'               => 'checkbox',
-    'eval'                    => array('tl_class'=>'w50'),
-    'sql'                     => "char(1) NOT NULL default ''"
-);
-$GLOBALS['TL_DCA']['tl_module']['fields']['bs_navbar_fixed_top'] = array(
-    'label'                   => &$GLOBALS['TL_LANG']['tl_module']['bs_navbar_fixed_top'],
-    'exclude'                 => true,
-    'inputType'               => 'checkbox',
-    'eval'                    => array('tl_class'=>'w50'),
-    'sql'                     => "char(1) NOT NULL default ''"
-);
-$GLOBALS['TL_DCA']['tl_module']['fields']['bs_navbar_dropup'] = array(
-    'label'                   => &$GLOBALS['TL_LANG']['tl_module']['bs_navbar_dropup'],
-    'exclude'                 => true,
-    'inputType'               => 'checkbox',
-    'eval'                    => array('tl_class'=>'w50'),
-    'sql'                     => "char(1) NOT NULL default ''"
-);
+
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['bs_navbar_brand'] = array(
     'label'                   => &$GLOBALS['TL_LANG']['tl_module']['bs_navbar_brand'],

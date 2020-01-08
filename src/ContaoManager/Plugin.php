@@ -1,13 +1,5 @@
 <?php
 
-/*
- * This file is part of [package name].
- *
- * (c) John Doe
- *
- * @license LGPL-3.0-or-later
- */
-
 namespace Hhcom\CreativeContaoBundle\ContaoManager;
 
 use Contao\CoreBundle\ContaoCoreBundle;
@@ -27,12 +19,7 @@ class Plugin implements BundlePluginInterface
         return [
             BundleConfig::create(CreativeContaoBundle::class)
                 ->setLoadAfter([
-                    ContaoCoreBundle::class,
-                    ContaoFaqBundle::class,
-                    ContaoNewsBundle::class,
-                    ContaoNewsletterBundle::class,
-                    ContaoCalendarBundle::class,
-                    ContaoCommentsBundle::class
+                    ContaoCoreBundle::class
                     ]),
         ];
     }
